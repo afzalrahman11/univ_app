@@ -12,7 +12,7 @@
         <div class="card-content white-text">
           <span class="card-title">Name: <%= student.name%></span>
           <p>Email: <%= student.email%></p>
-          <p>Courses Enrolled : None</p>
+          <p>Courses Enrolled : <%= student.courses.count %> </p>
         </div>
         <div class="card-action">
           <%= link_to "View Profile", student %>
