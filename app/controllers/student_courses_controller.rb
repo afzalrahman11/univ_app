@@ -5,7 +5,7 @@ class StudentCoursesController < ApplicationController
     unless current_user.courses.include?(course_to_add)
       StudentCourse.create(course: course_to_add, student: current_user)
       flash[:notice] = "You have successfully enrolled in #{course_to_add.name}"
-      redirect_to current_user
+      redirect_to root_path
     else
       flash[:notice] = "Something wrong with your enrollment"
       redirect_to root_path
